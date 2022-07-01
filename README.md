@@ -27,7 +27,29 @@ Simple enough, adds options for *Greeting*, *Ending* customisation and *Theme* o
 
 ![image](https://user-images.githubusercontent.com/75097362/176897478-d994b2f7-36ef-42d2-ba41-8a82fec1a872.png)
 
-# RUN
+# Requirement installation
+
+To use my interview gui you must have the required packages. You can install this using the 'setup.bat' file or running it manually after installing Python IDLE **(mentioned below)**
+
+## Manually
+
+### MAKE SURE TO TYPE THESE EXACTLY AS SHOWN
+
+1. Once Python IDLE is installed open a fresh command prompt window
+2. Type pip install pyautogui
+### pip install pyautogui
+3. Once that is complete type pip install PySimpleGUI
+### pip install PySimpleGUI
+
+## Setup.bat
+1. Just run it lol
+
+# Running
+
+### Running with EXE
+> EXE file generated with psgcompiler
+
+1. Download the exe file and run it lol
 
 ### An exe file will be **included** but if you would like to run it using Python IDLE please follow the instructions:
 
@@ -39,8 +61,4 @@ Simple enough, adds options for *Greeting*, *Ending* customisation and *Theme* o
 4. Once the installation process has completed you can run the GUI directly, just double click the file and open it with python. 
 ![image](https://user-images.githubusercontent.com/75097362/176905921-15359d27-2b85-4c81-809a-8e61e12daf68.png)
 
-## Running with EXE
-
-1. Download the exe file and run it lol
-
-### Any suggestions please dm Sparky#1913 on discord or make a pull request.
+### Any suggestions please DM Sparky#1913 on discord or make a pull request.
