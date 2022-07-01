@@ -16,7 +16,7 @@ All question buttons layed out and labelled with output going to the 'Concatenat
 
 Ending message and Greeting are both _customizable_ in **Config tab**
 
-### Kick user is also intergrated with options for **username** and **template for kick**
+### Kick user is also integrated with options for **username** and **template for kick**
 
 The kick message will be generated with previous settings applied (/e, autocopy)
 
