@@ -34,7 +34,8 @@ Simple enough, adds options for *Greeting*, *Ending* customisation and *Theme* o
 1. Go to https://www.python.org/downloads/ and press download python ![image](https://user-images.githubusercontent.com/75097362/176901691-ae60a1bf-06ee-46ea-bf2b-6551f38ef4b8.png)
 2. Save the installer and run it
 3. Click on add python to PATH and press Install Now ![image](https://user-images.githubusercontent.com/75097362/176902131-84dba629-a17c-4b39-b1d6-e0bd7923f691.png)
-4. Once the installation process has completed you can run the GUI directly, just double click the file and open it with python. ![image](https://user-images.githubusercontent.com/75097362/176905921-15359d27-2b85-4c81-809a-8e61e12daf68.png)
+4. Once the installation process has completed you can run the GUI directly, just double click the file and open it with python. 
+![image](https://user-images.githubusercontent.com/75097362/176905921-15359d27-2b85-4c81-809a-8e61e12daf68.png)
 
 ## Running with EXE
 
