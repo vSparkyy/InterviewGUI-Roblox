@@ -29,11 +29,12 @@ Simple enough, adds options for *Greeting*, *Ending* customisation and *Theme* o
 
 # Requirement installation
 
-To use my interview gui you must have the required packages. You can install this using the 'setup.bat' file or running it manually after installing Python IDLE **(mentioned below)**
+To use my interview gui you must have the required modules. You can install this using the 'setup.bat' file or installing them manually after installing Python IDLE **(mentioned below)**
 
 ## Manually
 
 ### MAKE SURE TO TYPE THESE EXACTLY AS SHOWN
+> Module names can also be found in requirements.txt
 
 1. Once Python IDLE is installed open a fresh command prompt window
 2. Type pip install pyautogui
