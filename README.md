@@ -59,6 +59,7 @@ To use my interview gui you must have the required packages. You can install thi
 2. Save the installer and run it
 3. Click on add python to PATH and press Install Now ![image](https://user-images.githubusercontent.com/75097362/176902131-84dba629-a17c-4b39-b1d6-e0bd7923f691.png)
 4. Once the installation process has completed you can run the GUI directly, just double click the file and open it with python. 
+
 ![image](https://user-images.githubusercontent.com/75097362/176905921-15359d27-2b85-4c81-809a-8e61e12daf68.png)
 
 ### Any suggestions please DM Sparky#1913 on discord or make a pull request.
