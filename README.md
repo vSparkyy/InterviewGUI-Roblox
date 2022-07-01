@@ -27,6 +27,8 @@ Simple enough, adds options for *Greeting*, *Ending* customisation and *Theme* o
 
 ![image](https://user-images.githubusercontent.com/75097362/176897478-d994b2f7-36ef-42d2-ba41-8a82fec1a872.png)
 
+# RUN
+
 ### An exe file will be **included** but if you would like to run it using Python IDLE please follow the instructions:
 
 ## Running with Python IDLE
