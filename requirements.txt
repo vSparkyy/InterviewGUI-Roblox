@@ -1,3 +1,2 @@
 pyautogui
 PySimpleGUI
-discord.py
