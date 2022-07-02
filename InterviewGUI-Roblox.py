@@ -48,7 +48,7 @@ def create_window(theme):
             [sg.Checkbox("/e enabled?", default = True, key = "/e", enable_events = True), sg.Checkbox("Autocopy", key = "copy", enable_events = True), sg.Text("USAGE: Click on the output box when clicking question / rule button", visible = False, key = 'usage')],
             [sg.Multiline("Notepad", size = (50,10))],
             [sg.Text("Intro", font = 'Arial 16'), sg.Text("Disclaimer: If updating teamname or /e usage please click button twice")],
-            [sg.Button("Greeting"), sg.Button("Grammar rule")],
+            [sg.Button("Greeting"), sg.Button("Grammar rule"), sg.Button("GS", size = (6))],
             [sg.Button("Detail rule"), sg.Button("Time limit"), sg.Button("Plagiarism")],
             [sg.Text("Questions", font = 'Arial 16')],
             [sg.Button("Question 1"), sg.Button("Question 2"), sg.Button("Question 3"), sg.Button("Question 4")],
