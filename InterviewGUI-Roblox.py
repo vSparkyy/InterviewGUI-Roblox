@@ -1,5 +1,6 @@
 import pyautogui as pg
 import PySimpleGUI as sg
+import time
 
 finalstring = ["/e"]
 conc1 = []
@@ -42,12 +43,12 @@ def create_window(theme):
                            [sg.Text("Ending edit: "), sg.Multiline(key = 'change_e', size = (50,5)), sg.Button("Edit ending"), sg.Button("Reset End")],
                            [sg.Text("Theme edit: "), sg.Listbox(values = sg.theme_list(), size = (20, 5), key = "theme", enable_events = True), sg.Button("Edit theme")]]
 
-    maintab_layout = [[sg.Text("Sparky's Interview Helper", font = 'Arial 20')],
+    maintab_layout1 = [[sg.Text("Sparky's Interview Helper", font = 'Arial 20')],
             [sg.Text("Team name: "), sg.Input(key = 'team'), sg.Button('Confirm')],
             [sg.Checkbox("/e enabled?", default = True, key = "/e", enable_events = True), sg.Checkbox("Autocopy", key = "copy", enable_events = True), sg.Text("USAGE: Click on the output box when clicking question / rule button", visible = False, key = 'usage')],
             [sg.Multiline("Notepad", size = (50,10))],
             [sg.Text("Intro", font = 'Arial 16'), sg.Text("Disclaimer: If updating teamname or /e usage please click button twice")],
-            [sg.Button("Greeting"), sg.Button("Grammar rule"), sg.Button("GS", size = (6))],
+            [sg.Button("Greeting"), sg.Button("Grammar rule")],
             [sg.Button("Detail rule"), sg.Button("Time limit"), sg.Button("Plagiarism")],
             [sg.Text("Questions", font = 'Arial 16')],
             [sg.Button("Question 1"), sg.Button("Question 2"), sg.Button("Question 3"), sg.Button("Question 4")],
@@ -59,6 +60,13 @@ def create_window(theme):
             [sg.Text("Kick message template:"), sg.Combo(["No reason", "Grammar Strikes", "Copy paste", "Time limit", "Passed kick (Safechat)", "Failed kick (Safechat)", "End of interview kick (No Safechat)"], readonly = True, key = 'reason'), sg.Text("Username for kick"), sg.Input(key ='user'), sg.Button("OK")],
             [sg.Text("Kick user message: "), sg.Input("Generate kick message", key = 'kickmsg', expand_x = True)]]
 
+    maintab_layout2 = [[sg.Text("Timer", font = "Arial 30")],
+                       [sg.Text(font=('Helvetica', 20), justification='center', key='timer')],
+                       [sg.Button("Pause",key="run-pause"), sg.Button("Reset", key="reset",expand_x=True)],
+                       ]
+
+    maintab_layout = [[sg.Col(maintab_layout1), sg.Col(maintab_layout2)]]
+
     layout = [[sg.TabGroup(
             [[sg.Tab('Main', maintab_layout), sg.Tab('Config', secondarytab_layout)]]
             )]]
@@ -66,6 +74,9 @@ def create_window(theme):
     return sg.Window("Interview Helper", layout, finalize = True)
 
 window = create_window('Dark Amber')
+
+def time_as_int():
+    return int(round(time.time() * 100))
 
 def checks():
     global finalstring, conc1
@@ -81,9 +92,26 @@ def checks():
         finalstring = ["/e"]
         finalstring.append(("%"+teamvalue) if teamvalue is not None else None)
 
+current_time, paused_time, paused = 0, 0, False
+start_time = time_as_int()
 
 while True:
-    event, values = window.read()
+    if not paused:
+        event, values = window.read(timeout=10)
+        current_time = time_as_int() - start_time
+    else:
+        event, values = window.read()
+    if event == 'reset':
+        paused_time = start_time = time_as_int()
+        current_time = 0
+    elif event == 'run-pause':
+        paused = not paused
+        if paused:
+            paused_time = time_as_int()
+        else:
+            start_time = start_time + time_as_int() - paused_time
+        window['run-pause'].update('Run' if paused else 'Pause')
+    window['timer'].update('{:02d}:{:02d}.{:02d}'.format((current_time // 100) // 60,(current_time // 100) % 60,current_time % 100))
     if event is None:
         break
     if event == "Edit greeting":
