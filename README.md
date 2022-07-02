@@ -20,7 +20,7 @@ Ending message and Greeting are both _customizable_ in **Config tab**
 
 The kick message will be generated with previous settings applied (/e, autocopy)
 
-![image](https://user-images.githubusercontent.com/75097362/176897099-d817aa06-682d-4aa8-8b6a-ebabb806e29f.png)
+![image](https://user-images.githubusercontent.com/75097362/177017691-e5d253ac-1ee8-4121-99f6-8da9e4fa6ad0.png)
 
 # CONFIG OPTIONS
 Simple enough, adds options for *Greeting*, *Ending* customisation and *Theme* options.
